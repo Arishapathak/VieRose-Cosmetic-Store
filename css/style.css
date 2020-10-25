@@ -1,0 +1,195 @@
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+nav{
+	background-color: #800040;
+  	color: white;
+}
+#mybutton{
+  align-items: center;
+}
+#rose,#fontvierose{
+   font-family: 'Sofia';font-size: 22px;
+}
+.rose1{
+   font-family: 'Sofia';
+   color: #800040;
+}
+#news{
+  font-family: 'Sofia';
+   color: red;
+   font-size: 40px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 450px;
+  }
+  .aboutimg{
+   width: 100%;
+   height: 200px;
+  }
+  .diorimg{
+
+    width: 100%;
+    height: 250px;
+  }
+  .lakmeimg{
+
+    width: 400px;
+    height: 350px;
+  }
+  .banner{
+    padding: 0;
+    margin: 0;
+  }
+  .carousel-inner1 img {
+  	padding-left: 140px;
+    width: 90%;
+    height: 200px;
+  }
+  footer{
+  	background-color: #800040;
+  	color: white;
+  	text-align: center; 
+  }
+  a{
+  	text-decoration:none;
+  	color: white;
+  }
+  ul{
+  	list-style-type: none;
+  }
+  #help{
+  	font-size: 20px;
+  }
+  #bonjour{
+  	font-family: 'Sofia';
+  	background-color: #800040;
+  	color: white;
+  }
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 60%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-instagram {
+  background: purple;
+  color: white;
+}
+.loginbutton{
+  margin-right: 10px;
+  background-color: #800040;
+  color: white;
+}
+.loginbutton a:hover{
+color: black;
+background-color: #800040;
+}
+
+.signupbutton{
+  background-color: #800040;
+  color: white;
+}
+.signupbutton a:hover{
+color: black;
+background-color: #800040;
+}
+.logoutbutton{
+  background-color: #800040;
+  color: white;
+}
+.logoutbutton a:hover{
+color: black;
+background-color: #800040;
+}
+.sidebar {
+  height: 60%;
+  width: 80px;
+  position: fixed;
+  z-index: 1;
+  top: 130px;
+  left: 0;
+  overflow-x: hidden;
+  background-color:rgba(128, 0, 64,0.5);
+ 
+  padding-top: 16px;
+}
+
+/* Style sidebar links */
+.sidebar a {
+
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: inline-block;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+ .forgot-link {
+        padding-bottom: 5px;
+        float: right;
+        background-color: white;
+        color: black;
+    }
+    .noaccout{
+       padding: 0;
+      
+        float: right;
+        background-color: white;
+        color: black;
+    }
+.remember{
+  margin-top: 1px;
+}
+.cardb{
+  height: 400px;
+}
+label{
+  font-size: 22px;
+}
+
+
+
+.container-fluid i {
+    margin-left: -75px;
+    margin-top:-10px; 
+    cursor: pointer;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magazine</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Piedra' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <script type="text/javascript">
+    function Show(){
+      var a=document.getElementById("psswd");
+      if(a.type==="password")
+        a.type="text";
+      else
+        a.type="password";
+    }
+    function Check(){
+      var a=document.getElementById("cpsswd");
+      if(a.type==="password")
+        a.type="text";
+      else
+        a.type="password";
+    }
+  </script> 
+</head>
+<body>
+<div class="sidebar">
+  <a href="index.html"><i class="fa fa-home"></i>Home</a>
+  <a href="login.html"><i class="fa fa-user-circle"></i>Login</a>
+  <a href="signup.html"><i class="fa fa-user-plus"></i></i>Signup</a>
+</div>
+<section class="my-5">
+<div class="card col-md-8 offset-md-3">
+          <div class="py-5">
+    <h2 class="text-center" id="news"><i class="fa fa-user-plus"></i>Signup</h2><br>
+    <h4 class="text-center"> Join the <span id="news">Vie Rose</span> community</h4>
+  </div>
+<div class="container-fluid">
+  <form method="post" action="">
+        <div class="row text-center py-3">
+    <div class="col-md-12 col-lg-12 col-12"><input class="w-50" name="email" type="email" placeholder="E-mail" required></div></div>
+      <div class="row text-center py-3">
+    <div class="col-md-12 col-lg-12 col-12"><input class="w-50" name="username" type="text" placeholder="Username" required></div></div>
+      <div class="row text-center py-3">
+    <div class="col-md-12 col-lg-12 col-12"><input class="w-50" name="phone" type="number" placeholder="Phone" required></div></div>
+
+    <div class="row text-center ">
+    <div class="col-md-12 col-lg-12 col-12"><input class="w-50" type="password" name="password" id="psswd" placeholder="Password" required ><a class="button btn-xs" onclick="Show();"><i class="fa fa-eye" ></i></a></div>
+  </div>
+  <div class="row text-center ">
+    <div class="col-md-12 col-lg-12 col-12"><input class="w-50" type="password" name="cpassword" id="cpsswd" placeholder="Confirm Password" required ><a class="button" onclick="Check();"><i class="fa fa-eye" ></i></a></div>
+  </div>
+    <div class="row text-center my-3">
+    <div class="col-md-12 col-lg-12 col-12"><button class="btn btn-outline-danger w-25" name="sign">Sign Up</button></div>
+  </div>
+    <div class="row text-center">
+      <div class="col-md-12 col-lg-12 col-12">By Signing Up you agree to our<a href="terms.html" class="btn  text-danger"> Terms and Conditions</a></div> 
+  </div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

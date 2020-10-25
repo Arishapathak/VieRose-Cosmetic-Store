@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Piedra'rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript">
+    function Show(){
+      var a=document.getElementById("psswd");
+      if(a.type==="password")
+        a.type="text";
+      else
+        a.type="password";
+    }
+  </script>
+</head>
+<body>
+<!--Side navbar-->
+<div class="sidebar">
+  <a href="index.php"><i class="fa fa-home"></i>Home</a>
+  <a href="login.php"><i class="fa fa-user-circle"></i>Login</a>
+  <a href="signup.php"><i class="fa fa-user-plus"></i></i>Signup</a>
+</div>
+<!--Main form-->
+<section class="my-5">
+<div class="card col-md-8 offset-md-3">
+          <div class="py-5">
+    <h2 class="text-center" id="news"><i class="fa fa-user-circle"></i>Login</h2>
+  </div>
+<div class="container-fluid">
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+  <div class="row text-center py-3">
+    <div class="col-md-12 col-lg-12 col-12"><input class="w-50" name="email" type="email" placeholder="E-mail" required></div></div>
+    <div class="row text-center pass">
+    <div class="col-md-12 col-lg-12 col-12"><input class="w-50" type="password" name="password" id="psswd" placeholder="Password" required ><a class="button" onclick="Show();"><i class="fa fa-eye"></i></a></div>
+  </div>
+    <div class="row text-center my-3">
+    <div class="col-md-12 col-lg-12 col-12"><button class="btn btn-outline-danger w-25" name="log">Login</button></div>
+  </div>
+    <div class="row text-center">
+      <div class="col-md-6 col-lg-6 col-6"><a href="password.html" class="btn  text-danger">Forgot Password?</a></div>
+    <div class="col-md-6 col-lg-6 col-6">Do not have an account?<a href="signup.html" class="btn text-danger">Sign up</a></div>  
+  </div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>
