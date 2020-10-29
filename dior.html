@@ -9,18 +9,7 @@
   <link href='https://fonts.googleapis.com/css?family=Piedra' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" type="text/css" href="css/style.css"> 
-   <script>
-function logout() {
-  var txt;
-  if (confirm("Are you sure you want to logout?")) {
-    alert("Logging you out!");
-    location.replace("login.html");
-  } else {
-    txt = "Not logging out!";
-  }
-  
-}
-   </script>
+  <script src="script/script.js"></script>
 </head>
 <body>
 
@@ -54,11 +43,10 @@ function logout() {
         <a class="nav-link" href="magazine.html">Newsletter</a></li>
     </ul>
     <form class="form-inline ">
-      <a href="login.html" class="btn loginbutton"><i class="fa fa-user-circle"></i>
+      <a href="login.php" class="btn loginbutton" title="Login "><i class="fa fa-user-circle"></i>
     </a>
-  <a href="signup.html" class="btn  signupbutton" ><i class="fa fa-user-plus"></i></a>
-  <a  class="btn  slogoutbutton" onclick="logout();" ><i class="fa fa-sign-out"></i></a>
-  
+  <a href="signup.html" class="btn  signupbutton" title="Sign Up"><i class="fa fa-user-plus"></i></a>
+  <a class="btn  slogoutbutton" onclick="logout()" title="Log out"><i class="fa fa-sign-out"></i></a>
     </form>
   </div>
 </nav><div class="container-fluid banner">
@@ -76,21 +64,21 @@ function logout() {
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/Dior/diorcologne.jpg" alt="Card image" height="200px"></a>
   				<div class="card-body">
-   				 <h4 class="card-title" >&#8377;7188 &nbsp;<sub><strike>&#8377;7949</strike></sub><br><span class="text-danger"><h6>10%off!</h6></span><a href="cart.php?id=13&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
+   				 <h4 class="card-title" >&#8377;7188 &nbsp;<sub><strike>&#8377;7949</strike></sub><br><span class="text-danger"><h6>10%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
 		</div>	
 			</div>
 			<div class="col-lg-3 col-md-3 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/Dior/christian.jpg" alt="Card image" height="200px"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;6300 &nbsp;<sub><strike>&#8377;9000</strike></sub><br><span class="text-danger"><h6>30%off!</h6></span><a href="cart.php?id=14&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
+   				 <h4 class="card-title">&#8377;6300 &nbsp;<sub><strike>&#8377;9000</strike></sub><br><span class="text-danger"><h6>30%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
     			</div>
 		</div>
 			<div class="col-lg-3 col-md-3 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/Dior/palladio.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;760&nbsp; <sub><strike>&#8377;799</strike></sub><br><span class="text-danger"><h6>5%off!</h6></span><a href="cart.php?id=15&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a>
+   				 <h4 class="card-title">&#8377;760&nbsp; <sub><strike>&#8377;799</strike></sub><br><span class="text-danger"><h6>5%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a>
    				 </h4></div>		 
 		</div>	
 	</div>
@@ -98,7 +86,7 @@ function logout() {
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/Dior/8.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;639 &nbsp; <sub><strike>&#8377;799</strike></sub><br><span class="text-danger"><h6>20%off!</h6></span><a href="cart.php?id=16&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a>
+   				 <h4 class="card-title">&#8377;639 &nbsp; <sub><strike>&#8377;799</strike></sub><br><span class="text-danger"><h6>20%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a>
    				 </h4></div>		 
 		</div></div></div>
 	</div>
