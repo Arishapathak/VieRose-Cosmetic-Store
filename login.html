@@ -16,14 +16,37 @@
       else
         a.type="password";
     }
+    function move(){
+      var email=document.loginform.email.value;
+      var pwd=document.loginform.password.value;
+      var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    if(!pwd.match(decimal))
+     alert("Enter correct password"); 
+   if(!email.match(mailformat))
+    {
+      alert("Enter correct email id!");
+    }
+    return true;
+      
+  }   
+    function loginvalidation() {
+      
+  if (move()&&confirm("Login Successfull")) {
+    location.replace("C:/Users/HP/Desktop/VieRose/index.html");
+  } 
+    
+     }
+  
+
   </script>
 </head>
 <body>
 <!--Side navbar-->
 <div class="sidebar">
-  <a href="index.php"><i class="fa fa-home"></i>Home</a>
-  <a href="login.php"><i class="fa fa-user-circle"></i>Login</a>
-  <a href="signup.php"><i class="fa fa-user-plus"></i></i>Signup</a>
+  <a href="index.html" ><i class="fa fa-home"></i>Home</a>
+  <a href="login.html" ><i class="fa fa-user-circle"></i>Login</a>
+  <a href="signup.html"><i class="fa fa-user-plus"></i></i>Signup</a>
 </div>
 <!--Main form-->
 <section class="my-5">
@@ -32,14 +55,14 @@
     <h2 class="text-center" id="news"><i class="fa fa-user-circle"></i>Login</h2>
   </div>
 <div class="container-fluid">
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+  <form name="loginform" method="post" action="index.html">
   <div class="row text-center py-3">
     <div class="col-md-12 col-lg-12 col-12"><input class="w-50" name="email" type="email" placeholder="E-mail" required></div></div>
     <div class="row text-center pass">
     <div class="col-md-12 col-lg-12 col-12"><input class="w-50" type="password" name="password" id="psswd" placeholder="Password" required ><a class="button" onclick="Show();"><i class="fa fa-eye"></i></a></div>
   </div>
     <div class="row text-center my-3">
-    <div class="col-md-12 col-lg-12 col-12"><button class="btn btn-outline-danger w-25" name="log">Login</button></div>
+    <div class="col-md-12 col-lg-12 col-12"><button class="btn btn-outline-danger w-25" name="log" onclick="loginvalidation()">Login</button></div>
   </div>
     <div class="row text-center">
       <div class="col-md-6 col-lg-6 col-6"><a href="password.html" class="btn  text-danger">Forgot Password?</a></div>

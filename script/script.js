@@ -19,9 +19,7 @@ if(phone.length<10){
   return false;  
   }  
 }
- function loginvalidation() {
-           
- }
+ 
  function signupvalidation() {
     var name=document.signmeup.username.value;  
     var phone=document.signmeup.phone.value; 
@@ -74,4 +72,37 @@ else{
     else
       a.type="password";
   }
+
+  function cart(){
+    if(confirm("Add this item to cart?"))
+    alert("Your item is added to the cart");
+  }
+  function logout() {
+    var txt;
+    if (confirm("Are you sure you want to logout?")) {
+      alert("Logging you out!");
+      location.replace("login.html");
+    } else {
+      txt = "Not logging out!";
+    }
+    
+  }
+  function pvalidation() {
+    var email=document.frm.user.value;
+    var pwd=document.frm.pd.value;
+    var cpwd=document.frm.cpd.value;
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+    if(pwd!=cpwd){
+      alert("Password and confirm password fields must be same");
+    }
+    else if(!email.match(mailformat))
+    alert("Enter a valid email id")
+    else if(!pwd.match(decimal))
+    alert("Password must contain a digit,an uppercase character and a special character");
+    else
+    {alert("Password is updated");
+    
+  }}
+  
   

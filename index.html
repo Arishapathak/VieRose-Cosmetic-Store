@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <link rel="stylesheet" type="text/css" href="css/style.css">
+   <script src="script/script.js"></script>
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg">
@@ -47,12 +48,12 @@
         <a class="nav-link" href="magazine.html">Newsletter</a>
       </li>
     </ul>
-    <form class="form-inline ">
-      <a href="cart.html" class="btn cartbutton"><i class="fa fa-shopping-cart" style="color: white;"></i></a>
-      <a href="login.html" class="btn loginbutton" name="login"><i class="fa fa-user-circle"></i></a>Welcome!<br>
-  <a href="signup.html" class="btn  signupbutton" ><i class="fa fa-user-plus"></i></a>
-   <a href="logout.html" class="btn  slogoutbutton" ><i class="fa fa-sign-out"></i></a>
-    </form>
+	<form class="form-inline ">
+		<a href="login.html" class="btn loginbutton" title="Login "><i class="fa fa-user-circle"></i>
+	  </a>
+	<a href="signup.html" class="btn  signupbutton" title="Sign Up"><i class="fa fa-user-plus"></i></a>
+	<a class="btn  slogoutbutton" onclick="logout()" title="Log out"><i class="fa fa-sign-out"></i></a>
+	  </form>
   </div>
 </nav>
 <div id="demo" class="carousel slide" data-ride="carousel">
@@ -159,21 +160,21 @@
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/biotique/1.jpg" alt="Card image" height="200px"></a>
   				<div class="card-body">
-   				 <h4 class="card-title" >&#8377;350 &nbsp;<sub><strike>&#8377;500</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><form action="cart.php" method="post"><a href="cart.php?id=1&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
+   				 <h4 class="card-title" >&#8377;350 &nbsp;<sub><strike>&#8377;500</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
 		</div>	
 			</div>
 			<div class="col-lg-2 col-md-2 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/biotique/2.jpg" alt="Card image" height="200px"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;299 &nbsp;<sub><strike>&#8377;350</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=2&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
+   				 <h4 class="card-title">&#8377;299 &nbsp;<sub><strike>&#8377;350</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
     			</div>
 		</div>
 			<div class="col-lg-2 col-md-2 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/biotique.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;249 &nbsp; <sub><strike>&#8377;300</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=3&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a>
+   				 <h4 class="card-title">&#8377;249 &nbsp; <sub><strike>&#8377;300</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a>
    				 </h4></div>		 
 		</div>	
 	</div>
@@ -181,21 +182,21 @@
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/himalaya.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;199 &nbsp;<sub><strike>&#8377;249</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=4&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
+   				 <h4 class="card-title">&#8377;199 &nbsp;<sub><strike>&#8377;249</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
 		</div>	
 	</div>
 	<div class="col-lg-2 col-md-2 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/new-nivea.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;239 &nbsp;<sub><strike>&#8377;300</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=5&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
+   				 <h4 class="card-title">&#8377;239 &nbsp;<sub><strike>&#8377;300</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
 		</div>	
 	</div>
 	<div class="col-lg-2 col-md-2 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/livon.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;149 &nbsp;<sub><strike>&#8377;199</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=6&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
+   				 <h4 class="card-title">&#8377;149 &nbsp;<sub><strike>&#8377;199</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
 		</div>	
 	</div>
 </div>
@@ -211,21 +212,21 @@
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/biotiquecream.jpg" alt="Card image" height="200px"></a>
   				<div class="card-body">
-   				 <h4 class="card-title" >&#8377;350 &nbsp;<sub><strike>&#8377;500</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=7&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
+   				 <h4 class="card-title" >&#8377;350 &nbsp;<sub><strike>&#8377;500</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>
 		</div>	
 			</div>
 			<div class="col-lg-2 col-md-2 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/wow.jpg" alt="Card image" height="200px"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;299 &nbsp;<sub><strike>&#8377;350</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=8&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png?id=7" height="20px"></a></h4></div>
+   				 <h4 class="card-title">&#8377;299 &nbsp;<sub><strike>&#8377;350</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png?id=7" height="20px"></a></h4></div>
     			</div>
 		</div>
 			<div class="col-lg-2 col-md-2 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/lorgano.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;249 &nbsp; <sub><strike>&#8377;300</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=9&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a>
+   				 <h4 class="card-title">&#8377;249 &nbsp; <sub><strike>&#8377;300</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a>
    				 </h4></div>		 
 		</div>	
 	</div>
@@ -233,21 +234,21 @@
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/niveadeo.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;199 &nbsp;<sub><strike>&#8377;249</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=10&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
+   				 <h4 class="card-title">&#8377;199 &nbsp;<sub><strike>&#8377;249</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
 		</div>	
 	</div>
 	<div class="col-lg-2 col-md-2 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/nivea9.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;239 &nbsp;<sub><strike>&#8377;300</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=11&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
+   				 <h4 class="card-title">&#8377;239 &nbsp;<sub><strike>&#8377;300</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
 		</div>	
 	</div>
 	<div class="col-lg-2 col-md-2 col-6 py-3">
 			   <div class="card">
   				<a href=""><img class="card-img-top" src="images/lipstick.jpg" alt="Card image" height="200px;"></a>
   				<div class="card-body">
-   				 <h4 class="card-title">&#8377;149 &nbsp;<sub><strike>&#8377;199</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a href="cart.php?id=12&o=1" class="btn btn-outline-success">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
+   				 <h4 class="card-title">&#8377;149 &nbsp;<sub><strike>&#8377;199</strike></sub><br><span class="text-danger"><h6>%off!</h6></span><a class="btn btn-outline-success" onclick="cart()">Add to cart<img src="images/cart.png" height="20px"></a></h4></div>		 
 		</div>	
 	</div>
 </div>
