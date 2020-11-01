@@ -1,23 +1,32 @@
 
 function validation() {
 var name=document.magazine.username.value;  
-var phone=document.magazine.phone.value;  
+var phone=document.magazine.phone.value; 
+var email=document.magazine.email.value;
+var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
+     
 if(!isNaN(name))
 {
 alert("Please Enter Only Characters in UserName");
 document.magazine.username.select();
 return false;
 }
-if ((name.length < 5) || (name.length > 15))
+else if ((name.length < 5) || (name.length > 15))
 {
 alert("Username must be 5 to 15 Character");
 document.magazine.username.select();
 return false;
 } 
-if(phone.length<10){  
+else if(!email.match(mailformat))
+alert("Enter a valid email id")
+else if(phone.length<10){  
   alert("Phone Number must be at least 10 characters long.");  
   return false;  
   }  
+  else{
+    alert("You are now subscribed for newsletter!");
+    location.assign("index.html"); 
+  }
 }
  
  function signupvalidation() {
@@ -26,8 +35,7 @@ if(phone.length<10){
     var email=document.signmeup.email.value;
     var pwd=document.signmeup.password.value;
     var cpwd=document.signmeup.cpassword.value; 
-     var atposition=email.indexOf("@");  
-    var dotposition=email.lastIndexOf(".");  
+    var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/; 
     var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
     if(!isNaN(name))
     {
@@ -39,7 +47,8 @@ if(phone.length<10){
     alert("Username must be 5 to 15 Character");
    
     }
-    
+    else if(!email.match(mailformat))
+    alert("Enter a valid email id"); 
    else if(phone.length<10){  
         alert("Phone Number must be at least 10 characters long.");  
          
@@ -54,9 +63,27 @@ if(phone.length<10){
 else if(!pwd.match(decimal))
 alert("Password must have an UpperCase alphabet,a digit and a special character"); 
 else{
-    alert("Cheerio! You are a part of Vie Rose community now!")
+    alert("Cheerio! You are a part of Vie Rose community now!");  
 }
     }
+     
+    function loginvalidation() {
+      
+      var email=document.loginform.email.value;
+      var pwd=document.loginform.password.value;
+      var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var decimal=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
+   
+   if(!email.match(mailformat))
+    {
+      alert("Enter correct email id!");
+    } else if(!pwd.match(decimal))
+     alert("Enter correct password"); 
+    else 
+
+   return true;
+    
+     }  
 
  function Show(){
     var a=document.getElementById("psswd");
@@ -97,7 +124,7 @@ else{
       alert("Password and confirm password fields must be same");
     }
     else if(!email.match(mailformat))
-    alert("Enter a valid email id")
+    alert("Enter a valid email id");
     else if(!pwd.match(decimal))
     alert("Password must contain a digit,an uppercase character and a special character");
     else
